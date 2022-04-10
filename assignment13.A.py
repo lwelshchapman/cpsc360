@@ -1,3 +1,8 @@
+# Logan Welsh
+# lwelsh@chapman.edu
+# CPSC-360-01 Assignment 13.A
+# assignment13a.py
+
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
@@ -15,12 +20,55 @@ def refresh(width, height):
     glLoadIdentity()                                                        # reset transf matrix to an identity
 
 def question1():
-    #TODO
+    # Draw line strip
+    glColor3f(0.0, 0.0, 1.0)
+    glLineWidth(7.5)
+    glBegin(GL_LINE_STRIP)
+    glVertex3f(50.0, 50.0, 0.0)
+    glVertex3f(150.0, 350.0, 0.0)
+    glVertex3f(250.0, 50.0, 0.0)
+    glVertex3f(350.0, 350.0, 0.0)
+    glVertex3f(450.0, 50.0, 0.0)
+    glEnd()
+
+    # Draw points
+    glColor3f(1.0, 0.0, 0.0)
+    glPointSize(15.0)
+    glBegin(GL_POINTS)
+    glVertex3f(50.0, 50.0, 0.0)
+    glVertex3f(150.0, 350.0, 0.0)
+    glVertex3f(250.0, 50.0, 0.0)
+    glVertex3f(350.0, 350.0, 0.0)
+    glVertex3f(450.0, 50.0, 0.0)
+    glEnd()
 
     print("assignment 13.A-1")
 
 def question2():
-    #TODO
+    # Draw line strip
+    glColor3f(0.0, 0.0, 1.0)
+    glLineWidth(7.5)
+    glBegin(GL_LINES)
+    glVertex3f(50.0, 50.0, 0.0)
+    glVertex3f(150.0, 350.0, 0.0)
+    glVertex3f(150.0, 350.0, 0.0)
+    glVertex3f(250.0, 50.0, 0.0)
+    glVertex3f(250.0, 50.0, 0.0)
+    glVertex3f(350.0, 350.0, 0.0)
+    glVertex3f(350.0, 350.0, 0.0)
+    glVertex3f(450.0, 50.0, 0.0)
+    glEnd()
+
+    # Draw points
+    glColor3f(1.0, 0.0, 0.0)
+    glPointSize(15.0)
+    glBegin(GL_POINTS)
+    glVertex3f(50.0, 50.0, 0.0)
+    glVertex3f(150.0, 350.0, 0.0)
+    glVertex3f(250.0, 50.0, 0.0)
+    glVertex3f(350.0, 350.0, 0.0)
+    glVertex3f(450.0, 50.0, 0.0)
+    glEnd()
 
     print("assignment 13.A-2")
     
@@ -48,7 +96,7 @@ def main():
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH)  # set display mode of display-window
     glutInitWindowPosition(0, 0)                                            # set top-left display-window position
     glutInitWindowSize(width, height)                                       # set display-window size
-    window = glutCreateWindow("cpsc360:A13.A - TYPE YOUR NAME HERE")        # create window with title
+    window = glutCreateWindow("cpsc360:A13.A - Logan Welsh")        # create window with title
     glutDisplayFunc(draw)                                                   # display graphic content and wait
     glutMainLoop()                                                          # must be called at last; display graphics and put program into infinite loop
 
