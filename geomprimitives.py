@@ -133,6 +133,13 @@ def exercise2():
     # triangulate the rectangle to express it with two triangles 
     #   using GL_TRIANGLES or GL_TRIANGLE_STRIP
     # TODO: write you code below
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE)
+    glBegin(GL_TRIANGLE_STRIP)
+    glVertex3f(150.0, 50.0, 0.0)                                            # v0
+    glVertex3f(350.0, 50.0, 0.0)                                            # v1
+    glVertex3f(150.0, 450.0, 0.0)                                           # v3
+    glVertex3f(350.0, 450.0, 0.0)                                           # v2
+    glEnd()
 
 
 ########################################### OpenGL Program ####################################################
@@ -151,7 +158,7 @@ def draw():                                                                 # Th
     refresh(width, height)                                                  # reset viweing and projection transforms for every iteration
 
     # draw points
-    drawPoints()
+    #drawPoints()
 
     # draw lines
     #drawLines()
@@ -166,7 +173,7 @@ def draw():                                                                 # Th
     #drawPolygon()
 
     # exercise2
-    #exercise2()
+    exercise2()
 
     glutSwapBuffers()                                                       # import for double-buffering
 
