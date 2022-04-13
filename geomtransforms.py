@@ -73,6 +73,7 @@ def example_partialdisk():
 def exercise1():
     # TODO: comment out "example_initTeapot()" in draw()
     # TODO: write your code below to scale the object 
+    glScalef(1.0, 2.0, 1.0)                                                 # construct scaling matrix with three scaling factors
 
 
     # draw the square using GL_LINE_LOOP
@@ -107,6 +108,9 @@ def exercise2():
     gluPartialDisk(gluNewQuadric(), 0.0, 50.0, 32, 32, 0.0, 45.0)
 
     # TODO: write your code BELOW to create the red disk
+    glRotatef(-45.0, 0.0, 0.0, 1.0)
+    glColor3f(1.0, 0.0, 0.0)
+    gluPartialDisk(gluNewQuadric(), 0.0, 50.0, 32, 32, 0.0, 45.0)
 
 
 def exercise2_solution():
@@ -149,7 +153,7 @@ def draw():                                                                 # Th
     drawAxes()
     
     # initial teapot in black at origin 
-    example_initTeapot()
+    #example_initTeapot()
 
     # geometric transformation
     #example_translate()                                                    # translation
@@ -159,7 +163,7 @@ def draw():                                                                 # Th
     #example_tranlate_rotate()
 
     #exercise1()
-    #exercise2()
+    exercise2()
 
     glutSwapBuffers()                                                       # import for double-buffering
 
