@@ -29,7 +29,21 @@ def question1a():
 
     #TODO: write your code below to draw 8 triangles 
     #        to triangulte the rectangle with GL_LINE
-
+    glColor3f(1.0, 0.0, 0.0)
+    glLineWidth(2.0)
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE)
+    glBegin(GL_TRIANGLE_STRIP)
+    glVertex3f(-100.0, 200.0, 0.0)                                         # v0
+    glVertex3f(100.0, 200.0, 0.0)                                          # v1
+    glVertex3f(-100.0, 100.0, 0.0)                                           # v2
+    glVertex3f(100.0, 100.0, 0.0)                                          # v3
+    glVertex3f(-100.0, 0.0, 0.0)
+    glVertex3f(100.0, 0.0, 0.0)
+    glVertex3f(-100.0, -100.0, 0.0)
+    glVertex3f(100.0, -100.0, 0.0)
+    glVertex3f(-100.0, -200.0, 0.0)
+    glVertex3f(100.0, -200.0, 0.0)
+    glEnd()
 
 
     print("assignment 13&14-1a")
@@ -57,7 +71,46 @@ def question1b():
 
     #TODO: write your code below to draw 8 triangles 
     #       to triangulte the rectangle with GL_FILL
+    glColor3f(1.0, 1.0, 1.0)
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL)
+    glBegin(GL_TRIANGLES)
+    glVertex3f(-100.0, 200.0, 0.0)                                         # v0
+    glVertex3f(100.0, 200.0, 0.0)                                          # v1
+    glVertex3f(-100.0, 100.0, 0.0)                                           # v2
 
+    glVertex3f(-100.0, 100.0, 0.0)                                           # v2
+    glVertex3f(100.0, 100.0, 0.0)                                          # v3
+    glVertex3f(-100.0, 0.0, 0.0)
+
+    glVertex3f(-100.0, 0.0, 0.0)
+    glVertex3f(100.0, 0.0, 0.0)
+    glVertex3f(-100.0, -100.0, 0.0)
+
+    glVertex3f(-100.0, -100.0, 0.0)
+    glVertex3f(100.0, -100.0, 0.0)
+    glVertex3f(-100.0, -200.0, 0.0)
+    glEnd()
+
+
+    glColor3f(0.0, 0.0, 0.0)
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL)
+    glBegin(GL_TRIANGLES)
+    glVertex3f(100.0, 200.0, 0.0)                                          # v1
+    glVertex3f(-100.0, 100.0, 0.0)                                           # v2
+    glVertex3f(100.0, 100.0, 0.0)                                           # v2
+
+    glVertex3f(100.0, 100.0, 0.0)                                          # v3
+    glVertex3f(-100.0, 0.0, 0.0)
+    glVertex3f(100.0, 0.0, 0.0)
+
+    glVertex3f(100.0, 0.0, 0.0)
+    glVertex3f(-100.0, -100.0, 0.0)
+    glVertex3f(100.0, -100.0, 0.0)
+
+    glVertex3f(100.0, -100.0, 0.0)
+    glVertex3f(-100.0, -200.0, 0.0)
+    glVertex3f(100.0, -200.0, 0.0)
+    glEnd()
 
 
     print("assignment 13&14-1b")
@@ -136,10 +189,10 @@ def draw():                                                                 # Th
 
     # assignment 13&14-1
     # TODO write your code in the function below
-    question1a()
+    #question1a()
 
     # TODO write your code in the function below
-    #question1b()
+    question1b()
 
     # assignment 13&14-2
     # TODO write your code in the function below
