@@ -33,10 +33,10 @@ def question1a():
     glLineWidth(2.0)
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE)
     glBegin(GL_TRIANGLE_STRIP)
-    glVertex3f(-100.0, 200.0, 0.0)                                         # v0
-    glVertex3f(100.0, 200.0, 0.0)                                          # v1
-    glVertex3f(-100.0, 100.0, 0.0)                                           # v2
-    glVertex3f(100.0, 100.0, 0.0)                                          # v3
+    glVertex3f(-100.0, 200.0, 0.0)
+    glVertex3f(100.0, 200.0, 0.0)
+    glVertex3f(-100.0, 100.0, 0.0)
+    glVertex3f(100.0, 100.0, 0.0)
     glVertex3f(-100.0, 0.0, 0.0)
     glVertex3f(100.0, 0.0, 0.0)
     glVertex3f(-100.0, -100.0, 0.0)
@@ -74,12 +74,12 @@ def question1b():
     glColor3f(1.0, 1.0, 1.0)
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL)
     glBegin(GL_TRIANGLES)
-    glVertex3f(-100.0, 200.0, 0.0)                                         # v0
-    glVertex3f(100.0, 200.0, 0.0)                                          # v1
-    glVertex3f(-100.0, 100.0, 0.0)                                           # v2
+    glVertex3f(-100.0, 200.0, 0.0)
+    glVertex3f(100.0, 200.0, 0.0)
+    glVertex3f(-100.0, 100.0, 0.0)
 
-    glVertex3f(-100.0, 100.0, 0.0)                                           # v2
-    glVertex3f(100.0, 100.0, 0.0)                                          # v3
+    glVertex3f(-100.0, 100.0, 0.0)
+    glVertex3f(100.0, 100.0, 0.0)
     glVertex3f(-100.0, 0.0, 0.0)
 
     glVertex3f(-100.0, 0.0, 0.0)
@@ -95,11 +95,11 @@ def question1b():
     glColor3f(0.0, 0.0, 0.0)
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL)
     glBegin(GL_TRIANGLES)
-    glVertex3f(100.0, 200.0, 0.0)                                          # v1
-    glVertex3f(-100.0, 100.0, 0.0)                                           # v2
-    glVertex3f(100.0, 100.0, 0.0)                                           # v2
+    glVertex3f(100.0, 200.0, 0.0)
+    glVertex3f(-100.0, 100.0, 0.0)
+    glVertex3f(100.0, 100.0, 0.0)
 
-    glVertex3f(100.0, 100.0, 0.0)                                          # v3
+    glVertex3f(100.0, 100.0, 0.0)
     glVertex3f(-100.0, 0.0, 0.0)
     glVertex3f(100.0, 0.0, 0.0)
 
@@ -122,6 +122,25 @@ def question2():
 
     # TODO: write your code BELOW to create another 5 partial-disks
     #        to complete the full disk by rotating the first one
+    glRotatef(60.0, 0.0, 0.0, 1.0)
+    glColor3f(1.0, 0.0, 1.0)
+    gluPartialDisk(gluNewQuadric(), 0.0, 50.0, 32, 32, 0.0, 60.0)
+
+    glRotatef(60.0, 0.0, 0.0, 1.0)
+    glColor3f(0.0, 0.0, 1.0)
+    gluPartialDisk(gluNewQuadric(), 0.0, 50.0, 32, 32, 0.0, 60.0)
+
+    glRotatef(60.0, 0.0, 0.0, 1.0)
+    glColor3f(0.0, 1.0, 1.0)
+    gluPartialDisk(gluNewQuadric(), 0.0, 50.0, 32, 32, 0.0, 60.0)
+
+    glRotatef(60.0, 0.0, 0.0, 1.0)
+    glColor3f(0.0, 1.0, 0.0)
+    gluPartialDisk(gluNewQuadric(), 0.0, 50.0, 32, 32, 0.0, 60.0)
+
+    glRotatef(60.0, 0.0, 0.0, 1.0)
+    glColor3f(1.0, 0.5, 0)
+    gluPartialDisk(gluNewQuadric(), 0.0, 50.0, 32, 32, 0.0, 60.0)
 
 
     print("assignment 13&14-2")
@@ -137,7 +156,23 @@ def question3a():
     glEnd()
 
     # TODO: write your code BELOW for the transformed triangle in RED
-    
+    glScalef(0.5, 2.0, 1.0)
+    glTranslatef(100.0, 50.0, 0.0)
+    glColor3f(1.0, 0.0, 0.0)
+    glBegin(GL_TRIANGLES)
+    glVertex3f(-25.0, -25.0, 0.0)
+    glVertex3f(25.0, -25.0, 0.0)
+    glVertex3f(0.0, 50.0, 0.0)
+    glEnd()
+
+    glTranslatef(100.0, 50.0, 0.0)
+    glScalef(0.5, 2.0, 1.0)
+    glColor3f(1.0, 0.0, 0.0)
+    glBegin(GL_TRIANGLES)
+    glVertex3f(-25.0, -25.0, 0.0)
+    glVertex3f(25.0, -25.0, 0.0)
+    glVertex3f(0.0, 50.0, 0.0)
+    glEnd()
 
     print("assignment 13&14-3a")
 
@@ -152,7 +187,14 @@ def question3b():
     glEnd()
 
     # TODO: write your code BELOW for the transformed triangle in RED
-
+    glRotate(-90.0, 0.0, 0.0, 1.0)
+    glRotate(45.0, 0.0, 0.0, 1.0)
+    glColor3f(1.0, 0.0, 0.0)
+    glBegin(GL_TRIANGLES)
+    glVertex3f(-25.0, -25.0, 0.0)
+    glVertex3f(25.0, -25.0, 0.0)
+    glVertex3f(0.0, 50.0, 0.0)
+    glEnd()
 
     print("assignment 13&14-3b")
 
@@ -192,7 +234,7 @@ def draw():                                                                 # Th
     #question1a()
 
     # TODO write your code in the function below
-    question1b()
+    #question1b()
 
     # assignment 13&14-2
     # TODO write your code in the function below
@@ -203,7 +245,7 @@ def draw():                                                                 # Th
     #question3a()
 
     # TODO write your code in the function below
-    #question3b()
+    question3b()
 
     glutSwapBuffers()                                                       # import for double-buffering
 
@@ -212,7 +254,7 @@ def main():
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH)  # set display mode of display-window
     glutInitWindowPosition(0, 0)                                            # set top-left display-window position
     glutInitWindowSize(width, height)                                       # set display-window size
-    window = glutCreateWindow("cpsc360:A13-14 - TYPE YOUR NAME HERE")        # create window with title
+    window = glutCreateWindow("cpsc360:A13-14 - Logan Welsh")        # create window with title
     glutDisplayFunc(draw)                                                   # display graphic content and wait
     glutMainLoop()                                                          # must be called at last; display graphics and put program into infinite loop
 
