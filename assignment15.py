@@ -56,7 +56,7 @@ def draw():                                                                 # Th
     refresh(width, height)                                                  # reset viweing and projection transforms for every iteration
 
     # viewing transformation
-    gluLookAt(0, 0, 0, 0, 0, -1, 0, 1, 0)                                   # eyex,eyey,eyez,lookatx,lookaty,lookatz,upx,upy,upz                              
+    gluLookAt(0, 0, -100, 0, 0, 1, 0, 1, 0)                                   # eyex,eyey,eyez,lookatx,lookaty,lookatz,upx,upy,upz                              
     
     # draw x,y axes
     drawAxes()
@@ -75,7 +75,7 @@ def main():
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH)  # set display mode of display-window
     glutInitWindowPosition(0, 0)                                            # set top-left display-window position
     glutInitWindowSize(width, height)                                       # set display-window size
-    window = glutCreateWindow("cpsc360:A15 - TYPE YOUR NAME HERE")          # create window with title
+    window = glutCreateWindow("cpsc360:A15 - Logan Welsh")          # create window with title
     glutDisplayFunc(draw)                                                   # display graphic content and wait
     glutMainLoop()                                                          # must be called at last; display graphics and put program into infinite loop
 
