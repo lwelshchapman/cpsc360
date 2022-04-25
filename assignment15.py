@@ -56,7 +56,7 @@ def draw():                                                                 # Th
     refresh(width, height)                                                  # reset viweing and projection transforms for every iteration
 
     # viewing transformation
-    gluLookAt(0, 0, 0, 0, 0, -1, 0, 1, 0)                                   # eyex,eyey,eyez,lookatx,lookaty,lookatz,upx,upy,upz                              
+    gluLookAt(0, 0, 20, 0, 0, -1, 0, 1, 0)                                   # eyex,eyey,eyez,lookatx,lookaty,lookatz,upx,upy,upz                              
     
     # draw x,y axes
     drawAxes()
@@ -66,7 +66,6 @@ def draw():                                                                 # Th
 
     # draw the cube
     glColor3f(0, 1, 0)
-    glTranslatef(0, 0, -20)
     glutSolidCube(5)
 
     glutSwapBuffers()                                                       # import for double-buffering
